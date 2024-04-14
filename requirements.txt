@@ -1,0 +1,6 @@
+slack
+pathlib
+python-dotenv 
+flask 
+slackeventsapi
+uuid
