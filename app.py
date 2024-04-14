@@ -16,7 +16,7 @@ signing_secret = os.environ["SLACK_SIGNING_SECRET"]
 state = str(uuid4())
 
 # get the scopes needed for this app
-oauth_scope = ", ".join(["chat:write", "channels:read", "groups:read"])
+oauth_scope = ", ".join(["chat:write", "channels:read", "groups:read", "mpim:read", "channels:history"])
 
 # create a dictionary to represent a database to store our token + initialise the app
 token_database = {}
@@ -80,6 +80,7 @@ def member_joined_channel(payload):
         # now print out the message
         client.chat_postMessage(channel=channelID, 
         text="Please give a warm welcome to <@" + user + ">! Would you mind also introducing yourself? We would love to get to know you! :tada::wave:")
+        
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=5000)
