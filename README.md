@@ -7,11 +7,9 @@ https://github.com/MaayanLab/slackbot-tutorial
 https://github.com/stevengill/slack-python-oauth-example/blob/master/app.py
 
 
-
 ### What this is:
 
 A bot that automatically sends a templated message when someone new joins the Slack Channel
-
 
 
 ### How to setup:
@@ -41,3 +39,11 @@ A bot that automatically sends a templated message when someone new joins the Sl
        - You will see a button Add to Slack where you can click on it and it will add the bot to your system
 6. There is a dockerfile which you can just upload the whole thing to your deployment server, or if you are using localhost you can just run using docker compose up
 7. Enjoy! Your bot will now trigger a message for every new joiner to the channel!
+
+
+### .env file:
+
+Just go create a .env file and put these 3 in:
+export SLACK_CLIENT_ID = XXX
+export SLACK_CLIENT_SECRET = XXX
+export SLACK_SIGNING_SECRET = XXX
