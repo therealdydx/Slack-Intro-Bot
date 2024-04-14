@@ -37,6 +37,9 @@ A bot that automatically sends a templated message when someone new joins the Sl
      - Add your URL into there
      - Remember! When you want to add the bot, you have to use link/begin_auth, not just link
        - You will see a button Add to Slack where you can click on it and it will add the bot to your system
+   - Go to Event Subscriptions
+     - Add the url with /slack/events so like introbot.com/slack/events on the URL as well!
+     - Remember to subscribe to the member joined channel event as well in Subscribe to Bot Events!
 6. There is a dockerfile which you can just upload the whole thing to your deployment server, or if you are using localhost you can just run using docker compose up
 7. Enjoy! Your bot will now trigger a message for every new joiner to the channel!
 
@@ -44,6 +47,6 @@ A bot that automatically sends a templated message when someone new joins the Sl
 ### .env file:
 
 Just go create a .env file and put these 3 in:
-export SLACK_CLIENT_ID = XXX
-export SLACK_CLIENT_SECRET = XXX
-export SLACK_SIGNING_SECRET = XXX
+- export SLACK_CLIENT_ID = XXX
+- export SLACK_CLIENT_SECRET = XXX
+- export SLACK_SIGNING_SECRET = XXX
